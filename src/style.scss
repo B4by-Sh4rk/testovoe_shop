@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(17, 17, 17);
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(109, 109, 109);
+    padding: 10px 50px;
+
+    .logo{
+        font-family: 'Aldrich', sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+    .button{
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        color: white;
+        background-color: rgb(175, 175, 175);
+        box-shadow: 0px 0px 2px black;
+        &:hover{
+            color: black;
+            box-shadow: 0px 0px 5px gray;
+            background-color: rgb(94, 94, 94);
+        }
+    }
+}
+
+
+.product__list{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 20px;
+}
+.product__card{
+    margin: 20px 80px;
+    padding: 10px 20px;
+    width: 200px;
+    min-height: 370px;
+    border-radius: 3px;
+    background-color: rgb(175, 175, 175);
+    text-align: center;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    .game__title{
+        font-size: 28px;
+        font-family: 'Ubuntu', sans-serif; 
+        font-weight: 700;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+        border-bottom: 5px dashed rgb(94, 94, 94);
+    }
+    .game__img{
+        width: 200px;
+        height: 280px;
+        overflow: hidden;
+        float: inline-start;
+        object-fit: cover;
+        outline: 5px  solid rgb(255, 255, 255);
+        outline-offset: -5px;
+    }
+}
+
+.order__form{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 550px);
+    gap: 20px;
+    .form__input{
+        border: none;
+        outline: none;
+        background-color: rgb(175, 175, 175);
+        padding: 5px 10px;
+        margin: 0px 5px;
+        font-size: 20px;
+    }
+    .form__select{
+        border: none;
+        outline: none;
+        background-color: rgb(175, 175, 175);
+        padding: 5px 10px;
+        font-size: 20px;
+        margin: 0px 5px;  
+    }
+    .form__button{
+        border: none;
+        outline: none;
+        background-color: rgb(155, 65, 65);
+        font-weight: 700;
+        padding: 10px 15px;
+        font-size: 20px;
+        margin: 0px 5px;
+        color: white;  
+        &:hover{
+            color: black;
+            background-color: darken($color: rgb(155, 65, 65), $amount: 10);
+            outline: 3px  solid rgba(0, 0, 0, 0.452);
+            outline-offset: -3px;
+        }
+    }
+}
