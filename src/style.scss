@@ -59,7 +59,7 @@ body{
     margin: 20px 80px;
     padding: 10px 20px;
     width: 200px;
-    min-height: 370px;
+    min-height: 420px;
     border-radius: 3px;
     background-color: rgb(175, 175, 175);
     text-align: center;
@@ -114,6 +114,12 @@ body{
         font-size: 20px;
         margin: 0px 5px;
         color: white;  
+        &:disabled{
+            background-color: gray;
+        }
+        &:disabled:hover{
+            background-color: gray;
+        }
         &:hover{
             color: black;
             background-color: darken($color: rgb(155, 65, 65), $amount: 10);
@@ -121,4 +127,9 @@ body{
             outline-offset: -3px;
         }
     }
+}
+.error__msg{
+    color: red;
+    font-size: 20px;
+    text-align: center;
 }

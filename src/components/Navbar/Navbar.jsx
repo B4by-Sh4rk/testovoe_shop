@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import MyModal from '../MyModal/MyModal';
-import Order_form from '../Order_form/Order_form';
 
-const Navbar = () => {
-    const [modal, setModal] = useState(false);
-    /*const createOrder = (newOrder) => {
-        setModal(false)
-      }*/
+const Navbar = ({visible, setVisible}) => {
+
     return (
         <div className='navbar'>
-            <MyModal visible={modal} setVisible={setModal}>
-                <Order_form/>
+            <MyModal visible={visible} setVisible={setVisible}>
             </MyModal>
             <div className="logo">GameShop</div>
-            <button className="button" onClick={() => setModal(true)}>ЗАКАЗАТЬ</button>
+            <button  className="button" setVisible={setVisible} onClick={() => setVisible(true)}>ЗАКАЗАТЬ</button>
         </div>
     );
 };

@@ -5,13 +5,11 @@ import MyModal from './components/MyModal/MyModal';
 import { useState } from 'react';
 
 function App() {
-  const [modal, setModal] = useState(false);
-  const createOrder = (newOrder) => {
-      setModal(false)
-    }
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="App">  
-    <Navbar setModal={setModal}/>
+    <Navbar visible={visible} setVisible={setVisible}/>
     <Product__list/>
     </div>
   );
