@@ -78,26 +78,32 @@ const MyModal = ({visible, setVisible}) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-    
+        ref__name.current.value = '';
+        ref__email.current.value = '';
+        ref__tel.current.value = '';
         emailjs.sendForm('service_n7t2a3j', 'template_4ft3glm', form.current, 'jry7NycqUneGYSJtj')
           .then((result) => {
               console.log(result.text);
-              ref__name.current.value = ''
-              ref__email.current.value = ''
-              ref__tel.current.value = ''
+
           }, (error) => {
               console.log(error.text);
-              ref__name.current.value = ''
-              ref__email.current.value = ''
-              ref__tel.current.value = ''
+              ref__name.current.value = '';
+              ref__email.current.value = '';
+              ref__tel.current.value = '';
           });
-          setVisible(false);
-          console.log(ref__email.current.value, ref__name.current.value, ref__tel.current.value);
           ref__name.current.value = '';
           ref__email.current.value = '';
           ref__tel.current.value = '';
-          console.log(ref__email.current.value, ref__name.current.value, ref__tel.current.value);
+          if( (ref__tel.current.value = '') || (ref__name.current.value = '') || (ref__email.current.value = '')){
+            setVisible(false);
+          }else{
+            ref__name.current.value = '';
+            ref__email.current.value = '';
+            ref__tel.current.value = '';
+            setVisible(false);
+          }
       };
+
 
 
     return (
