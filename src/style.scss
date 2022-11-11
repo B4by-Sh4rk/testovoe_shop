@@ -12,14 +12,14 @@ body{
 .navbar{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgb(109, 109, 109);
     padding: 10px 50px;
 
     .logo{
         font-family: 'Aldrich', sans-serif;
-        font-size: 30px;
+        font-size: 34px;
         color: white;
     }
     .button{
@@ -53,33 +53,70 @@ body{
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 350px);
-    gap: 20px;
+    gap: 20px 100px;
 }
 .product__card{
-    margin: 20px 80px;
-    padding: 10px 20px;
-    width: 200px;
-    min-height: 420px;
+    margin: 20px 80px 40px;
+    padding: 10px 25px;
+    width: 250px;
+    min-height: 400px;
     border-radius: 3px;
     background-color: rgb(175, 175, 175);
     text-align: center;
     box-shadow: 2px 2px 2px rgb(255, 255, 255);
-    .game__title{
+    .buy__button{
+        padding: 5px 105px;
+        border: none;
+        outline: none;
+        background-color: rgb(155, 65, 65);
+        font-weight: 700;
+        font-size: 20px;
+        color: white;  
+        cursor: pointer;
+        &:disabled{
+            background-color: gray;
+        }
+        &:disabled:hover{
+            background-color: gray;
+        }
+        &:hover{
+            color: black;
+            background-color: darken($color: rgb(155, 65, 65), $amount: 10);
+            outline: 3px  solid rgba(0, 0, 0, 0.452);
+            outline-offset: -3px;
+        }
+    }
+    .buy__game{
+        color: rgb(143, 12, 12);
+        font-weight: 700px;
         font-size: 28px;
+        font-family: 'Ubuntu', sans-serif; 
+        font-weight: 700;
+        padding-bottom: 3px;
+        background: radial-gradient(rgba(255, 255, 255, 0.651), transparent  70%);
+        margin-bottom: 10px;
+        border-bottom: 5px dashed rgb(94, 94, 94);
+        text-shadow: 0px 0px 2px black;
+    }
+    .game__title{
+        background: radial-gradient(rgba(255, 255, 255, 0.651), transparent  70%);
+        font-size: 30px;
         font-family: 'Ubuntu', sans-serif; 
         font-weight: 700;
         padding-bottom: 3px;
         margin-bottom: 10px;
         border-bottom: 5px dashed rgb(94, 94, 94);
+        white-space: nowrap;
     }
     .game__img{
-        width: 200px;
-        height: 280px;
+        width: 250px;
+        height: 320px;
         overflow: hidden;
         float: inline-start;
         object-fit: cover;
         outline: 5px  solid rgb(255, 255, 255);
         outline-offset: -5px;
+        margin-bottom: 15px;
     }
 }
 
@@ -89,6 +126,11 @@ body{
     display: grid;
     grid-template-columns: repeat(1, 550px);
     gap: 20px;
+    .form__text{
+        font-size: 20px;
+        font-family: 'Ubuntu', sans-serif; 
+        font-weight: 700;
+    }
     .form__input{
         border: none;
         outline: none;
@@ -114,11 +156,14 @@ body{
         font-size: 20px;
         margin: 0px 5px;
         color: white;  
+        cursor: pointer;
         &:disabled{
             background-color: gray;
+            cursor:not-allowed;
         }
         &:disabled:hover{
             background-color: gray;
+            cursor:not-allowed;
         }
         &:hover{
             color: black;
@@ -132,4 +177,20 @@ body{
     color: red;
     font-size: 20px;
     text-align: center;
+}
+
+.btn__pageup{
+    width:60px;
+    border: 3px  solid rgba(0, 0, 0, 0.452);
+    background:gray;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:30px;
+    right:50px;
+    cursor:pointer;
+    color:rgb(14, 14, 14);
+    font-family:verdana;
+    font-size:12px;
+    border-radius: 5px;
 }
